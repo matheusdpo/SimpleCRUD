@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Layout.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sys.FXController">
+	<children>
+		<AnchorPane id="header" prefHeight="80.0" prefWidth="700.0">
+			<children>
+				<ImageView fitHeight="42.0" fitWidth="63.0" layoutX="598.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/top/topLogo.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="601.0" layoutY="56.0" text="SUMMER" textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="Microsoft YaHei Bold" size="12.0" />
+					</font>
+				</Label>
+				<MenuButton id="mainMenu" layoutX="45.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="33.0">
+					<font>
+						<Font name="Microsoft YaHei" size="12.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/top/topMenu.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<items>
+						<CustomMenuItem mnemonicParsing="false" text="Unspecified Action" />
+						<MenuItem mnemonicParsing="false" text="CRUD" />
+					</items>
+				</MenuButton>
+			</children>
+		</AnchorPane>
+		<AnchorPane id="footer" layoutY="485.0" prefHeight="15.0" prefWidth="700.0">
+			<children>
+				<Label layoutX="17.0" text="Summer © 2022" textFill="#a1a1a1">
+					<font>
+						<Font size="9.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<TabPane layoutY="80.0" prefHeight="405.0" prefWidth="700.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab>
+					<graphic>
+						<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/tab/tabCreate.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<Label layoutX="260.0" layoutY="20.0" text="CREATE ACCOUNT" textAlignment="CENTER">
+									<font>
+										<Font name="Microsoft YaHei Bold" size="12.0" />
+									</font>
+								</Label>
+								<TextField fx:id="txtFieldCreateID" alignment="CENTER" editable="false" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="36.0" promptText="ID" />
+								<Label layoutX="58.0" layoutY="58.0" text="Name:" />
+								<TextField layoutX="57.0" layoutY="75.0" prefHeight="25.0" prefWidth="90.0" promptText="Jhon" />
+								<Label layoutX="154.0" layoutY="58.0" text="Surname:" />
+								<TextField layoutX="153.0" layoutY="75.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
+								<Label layoutX="310.0" layoutY="58.0" text="Username:" />
+								<TextField layoutX="309.0" layoutY="75.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
+								<Label layoutX="492.0" layoutY="59.0" text="Password:" />
+								<TextField layoutX="491.0" layoutY="76.0" prefHeight="25.0" prefWidth="149.0" promptText="********" />
+								<Label layoutX="15.0" layoutY="115.0" text="Civil Status:" />
+								<ChoiceBox layoutX="14.0" layoutY="132.0" prefHeight="25.0" prefWidth="135.0" />
+								<Label layoutX="154.0" layoutY="115.0" text="RG:" />
+								<TextField layoutX="153.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" promptText="25-688.168-2" />
+								<Label layoutX="309.0" layoutY="115.0" text="CPF:" />
+								<TextField layoutX="308.0" layoutY="131.0" prefHeight="25.0" prefWidth="150.0" promptText="496.203.789-02" />
+								<Label layoutX="466.0" layoutY="115.0" text="Date of Birth:" />
+								<DatePicker layoutX="465.0" layoutY="130.0" prefHeight="25.0" prefWidth="100.0" />
+								<Label layoutX="575.0" layoutY="112.0" text="Age:" />
+								<TextField alignment="CENTER" layoutX="572.0" layoutY="129.0" prefHeight="25.0" prefWidth="30.0" promptText="21" />
+								<Label layoutX="617.0" layoutY="113.0" text="UF:" />
+								<ChoiceBox layoutX="609.0" layoutY="130.0" prefHeight="25.0" prefWidth="20.0" />
+								<Label layoutX="15.0" layoutY="172.0" text="ZIP Code:" />
+								<TextField layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="135.0" promptText="12698-354" />
+								<Label layoutX="154.0" layoutY="172.0" text="Address:" />
+								<TextField layoutX="154.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" promptText="Saint Paul Street" />
+								<Label layoutX="309.0" layoutY="172.0" text="Bairro:" />
+								<TextField layoutX="309.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" promptText="Princess DJoulhy" />
+								<Label layoutX="479.0" layoutY="171.0" text="Nº:" />
+								<TextField layoutX="466.0" layoutY="188.0" prefHeight="25.0" prefWidth="42.0" promptText="245" />
+								<Label layoutX="516.0" layoutY="172.0" text="Cidade:" />
+								<TextField layoutX="516.0" layoutY="188.0" prefHeight="25.0" prefWidth="125.0" promptText="Burningtown" />
+								<Label layoutX="16.0" layoutY="228.0" text="E-Mail:" />
+								<TextField layoutX="15.0" layoutY="245.0" prefHeight="25.0" prefWidth="290.0" promptText="mail@sample.com" />
+								<Label layoutX="310.0" layoutY="229.0" text="DDD:" />
+								<TextField alignment="CENTER" layoutX="309.0" layoutY="246.0" prefHeight="25.0" prefWidth="30.0" promptText="12" />
+								<Label layoutX="346.0" layoutY="229.0" text="Mobile:" />
+								<TextField layoutX="345.0" layoutY="246.0" prefHeight="25.0" prefWidth="115.0" promptText="96578-9820" />
+								<Button fx:id="btnCheckCreateAccount" defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+									<graphic>
+										<ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../images/button/btnCheck.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</Button>
+								<Button fx:id="btnCancelCreateAccount" cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+									<graphic>
+										<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../images/button/btnClose.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+            <Tab>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tab/tabRead.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="260.0" layoutY="20.0" text="SEARCH ACCOUNT" textAlignment="CENTER">
+                           <font>
+                              <Font name="Microsoft YaHei Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="215.0" layoutY="50.0" text="INFO:" />
+                        <ChoiceBox layoutX="180.0" layoutY="67.0" prefHeight="25.0" prefWidth="135.0" />
+                        <TextField layoutX="340.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" promptText="INFO" />
+                        <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="36.0" promptText="ID" />
+                        <TextField editable="false" layoutX="57.0" layoutY="125.0" prefHeight="25.0" prefWidth="90.0" promptText="Jhon" />
+                        <TextField editable="false" layoutX="153.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
+                        <TextField editable="false" layoutX="309.0" layoutY="125.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
+                        <TextField editable="false" layoutX="491.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" promptText="password" />
+                        <ChoiceBox layoutX="15.0" layoutY="182.0" prefHeight="25.0" prefWidth="135.0" />
+                        <TextField editable="false" layoutX="153.0" layoutY="182.0" prefHeight="25.0" prefWidth="150.0" promptText="RG" />
+                        <TextField editable="false" layoutX="308.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="CPF" />
+                        <ChoiceBox layoutX="467.0" layoutY="180.0" prefHeight="25.0" prefWidth="100.0" />
+                        <TextField alignment="CENTER" editable="false" layoutX="572.0" layoutY="179.0" prefHeight="25.0" prefWidth="30.0" promptText="Age" />
+                        <ChoiceBox layoutX="608.0" layoutY="179.0" prefHeight="25.0" prefWidth="35.0" />
+                        <TextField editable="false" layoutX="15.0" layoutY="238.0" prefHeight="25.0" prefWidth="135.0" promptText="ZIP Code" />
+                        <TextField editable="false" layoutX="154.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="Address" />
+                        <TextField editable="false" layoutX="309.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="District" />
+                        <TextField editable="false" layoutX="467.0" layoutY="238.0" prefHeight="25.0" prefWidth="42.0" promptText="Nº" />
+                        <TextField editable="false" layoutX="516.0" layoutY="238.0" prefHeight="25.0" prefWidth="125.0" promptText="Burningtown" />
+                        <TextField editable="false" layoutX="15.0" layoutY="295.0" prefHeight="25.0" prefWidth="290.0" promptText="mail@sample.com" />
+                        <TextField alignment="CENTER" editable="false" layoutX="309.0" layoutY="295.0" prefHeight="25.0" prefWidth="30.0" promptText="DDD" />
+                        <TextField editable="false" layoutX="345.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" promptText="number-phone" />
+                        <Button fx:id="btnCheckSearchAccount" defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnCheck.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCancelSearchAccount" cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnClose.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="499.0" layoutY="339.0" text="Convert to:" />
+                        <Button fx:id="btnConvert2PDFSearchAccount" layoutX="484.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnConvert2PDF.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnConvert2XLSearchAccount" cancelButton="true" layoutX="533.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnConvert2XL.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tab/tabUpdate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="260.0" layoutY="20.0" text="UPDATE ACCOUNT" textAlignment="CENTER">
+                           <font>
+                              <Font name="Microsoft YaHei Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="215.0" layoutY="50.0" text="INFO:" />
+                        <ChoiceBox layoutX="180.0" layoutY="67.0" prefHeight="25.0" prefWidth="135.0" />
+                        <TextField layoutX="340.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" promptText="INFO" />
+                        <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="36.0" promptText="ID" />
+                        <TextField editable="false" layoutX="57.0" layoutY="125.0" prefHeight="25.0" prefWidth="90.0" promptText="Jhon" />
+                        <TextField editable="false" layoutX="153.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
+                        <TextField editable="false" layoutX="309.0" layoutY="125.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
+                        <TextField editable="false" layoutX="491.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" promptText="password" />
+                        <TextField editable="false" layoutX="15.0" layoutY="181.0" prefHeight="25.0" prefWidth="135.0" promptText="Civil Status" />
+                        <TextField editable="false" layoutX="153.0" layoutY="182.0" prefHeight="25.0" prefWidth="150.0" promptText="RG" />
+                        <TextField editable="false" layoutX="308.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="CPF" />
+                        <TextField editable="false" layoutX="468.0" layoutY="180.0" prefHeight="25.0" prefWidth="100.0" promptText="Date of Birth" />
+                        <TextField alignment="CENTER" editable="false" layoutX="572.0" layoutY="179.0" prefHeight="25.0" prefWidth="30.0" promptText="Age" />
+                        <TextField editable="false" layoutX="613.0" layoutY="180.0" prefHeight="25.0" prefWidth="35.0" promptText="UF" />
+                        <TextField editable="false" layoutX="15.0" layoutY="238.0" prefHeight="25.0" prefWidth="135.0" promptText="ZIP Code" />
+                        <TextField editable="false" layoutX="154.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="Address" />
+                        <TextField editable="false" layoutX="309.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="District" />
+                        <TextField editable="false" layoutX="467.0" layoutY="238.0" prefHeight="25.0" prefWidth="42.0" promptText="Nº" />
+                        <TextField editable="false" layoutX="516.0" layoutY="238.0" prefHeight="25.0" prefWidth="125.0" promptText="Burningtown" />
+                        <TextField editable="false" layoutX="15.0" layoutY="295.0" prefHeight="25.0" prefWidth="290.0" promptText="mail@sample.com" />
+                        <TextField alignment="CENTER" editable="false" layoutX="309.0" layoutY="295.0" prefHeight="25.0" prefWidth="30.0" promptText="DDD" />
+                        <TextField editable="false" layoutX="345.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" promptText="number-phone" />
+                        <Button fx:id="btnUpdateUpdateAccount" defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnUpdate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCancelUpdateAccount" cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnClose.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tab/tabDelete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="260.0" layoutY="20.0" text="DELETE ACCOUNT" textAlignment="CENTER">
+                           <font>
+                              <Font name="Microsoft YaHei Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="215.0" layoutY="50.0" text="INFO:" />
+                        <ChoiceBox layoutX="180.0" layoutY="67.0" prefHeight="25.0" prefWidth="135.0" />
+                        <TextField layoutX="340.0" layoutY="67.0" prefHeight="25.0" prefWidth="150.0" promptText="INFO" />
+                        <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="36.0" promptText="ID" />
+                        <TextField editable="false" layoutX="57.0" layoutY="125.0" prefHeight="25.0" prefWidth="90.0" promptText="Jhon" />
+                        <TextField editable="false" layoutX="153.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
+                        <TextField editable="false" layoutX="309.0" layoutY="125.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
+                        <TextField editable="false" layoutX="491.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" promptText="password" />
+                        <ChoiceBox layoutX="15.0" layoutY="182.0" prefHeight="25.0" prefWidth="134.0" />
+                        <TextField editable="false" layoutX="153.0" layoutY="182.0" prefHeight="25.0" prefWidth="150.0" promptText="RG" />
+                        <TextField editable="false" layoutX="308.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="CPF" />
+                        <ChoiceBox layoutX="467.0" layoutY="180.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField alignment="CENTER" editable="false" layoutX="572.0" layoutY="179.0" prefHeight="25.0" prefWidth="30.0" promptText="Age" />
+                        <ChoiceBox layoutX="608.0" layoutY="179.0" prefHeight="25.0" prefWidth="35.0" />
+                        <TextField editable="false" layoutX="15.0" layoutY="238.0" prefHeight="25.0" prefWidth="135.0" promptText="ZIP Code" />
+                        <TextField editable="false" layoutX="154.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="Address" />
+                        <TextField editable="false" layoutX="309.0" layoutY="238.0" prefHeight="25.0" prefWidth="150.0" promptText="District" />
+                        <TextField editable="false" layoutX="467.0" layoutY="238.0" prefHeight="25.0" prefWidth="42.0" promptText="Nº" />
+                        <TextField editable="false" layoutX="516.0" layoutY="238.0" prefHeight="25.0" prefWidth="125.0" promptText="Burningtown" />
+                        <TextField editable="false" layoutX="15.0" layoutY="295.0" prefHeight="25.0" prefWidth="290.0" promptText="mail@sample.com" />
+                        <TextField alignment="CENTER" editable="false" layoutX="309.0" layoutY="295.0" prefHeight="25.0" prefWidth="30.0" promptText="DDD" />
+                        <TextField editable="false" layoutX="345.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" promptText="number-phone" />
+                        <Button fx:id="btnDeleteDeleteAccount" defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnDelete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCancelDeleteAccount" cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/button/btnClose.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
