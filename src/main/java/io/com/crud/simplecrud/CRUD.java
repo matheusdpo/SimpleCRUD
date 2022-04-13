@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import io.com.connection.simplecrud.ConnectionSQL;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class CRUD {
 
@@ -24,11 +26,20 @@ public class CRUD {
 					+ user_password + "," + martial_status + "," + rg + "," + cpf + "," + date_of_birthh + "," + age
 					+ "," + state + "," + zipcode + "," + address + "," + district + "," + house_number + "," + city
 					+ "," + email + "," + ddd + "," + phone_number + ")");
-
+			System.out.println(
+					"[SIMPLECRUD] ............................................................ Inserting data in to the DataBase.");
 			connection.close();
+			System.out.println("[SIMPLECRUD] ............................................................ Done!");
 
-		} catch (SQLException error) {
-			System.err.println(error.getMessage());
+		} catch (SQLException e) {
+			System.err.println(
+					"SIMPLECRUD] ............................................................ You got an Exception!");
+			System.err.println(e.getMessage());
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setTitle("CRUD - create method");
+			alert.setContentText(e.getMessage());
+			alert.setResizable(false);
+			alert.show();
 		}
 	}
 
