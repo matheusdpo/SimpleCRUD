@@ -3,6 +3,7 @@ package io.com.connection.simplecrud;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -16,12 +17,19 @@ public class ConnectionSQL {
 
 	public static Connection connectDB() {
 		try {
+			System.out.println(
+					"[SIMPLECRUD] ............................................................ Connecting to the DataBase.");
 			connect = DriverManager.getConnection(url, user, pw);
+			System.out.println("[SIMPLECRUD] ............................................................ Connected!");
 		} catch (SQLException e) {
-			Alert a = new Alert(AlertType.WARNING);
-			a.setTitle("Warning ConnectionSQL");
-			a.setContentText(e.getMessage());
-			a.show();
+			System.err.println(
+					"SIMPLECRUD] ............................................................ You got an Exception!");
+			System.err.println(e.getMessage());
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setTitle("ConnectionSQL - connectDB method");
+			alert.setContentText(e.getMessage());
+			alert.setResizable(false);
+			alert.show();
 		}
 
 		return connect;
