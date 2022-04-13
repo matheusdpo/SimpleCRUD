@@ -332,25 +332,44 @@ public class FXController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ Adding content in to the GUI");
 
 		// add automatically the current year in the footer
 		Integer autoYear = Calendar.getInstance().get(Calendar.YEAR);
 		lblYear.setText(autoYear.toString());
+		System.out.println("[SIMPLECRUD] ............................................................ Footer '"
+				+ autoYear + "' added");
 
 		// add values in the choice boxes
 		chcCreateMartialStatus.getItems().addAll(MaritalStatusList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Create} Marital Status ChoiceBox Added");
 		chcCreateUF.getItems().addAll(UFList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Create} UF ChoiceBox Added");
 
 		chcReadInfo.getItems().addAll(InfoList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Read} INFO ChoiceBox Added");
 
 		chcUpdateMartialStatus.getItems().addAll(MaritalStatusList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Update} Marital Status ChoiceBox Added");
 		chcUpdateUF.getItems().addAll(UFList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Update} UF InfoChoiceBox Added");
 		chcUpdateInfo.getItems().addAll(InfoList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Update} Info ChoiceBox Added");
 
 		chcDeleteInfo.getItems().addAll(InfoList);
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ {Delete} Info ChoiceBox Added");
 	}
 
 	public void clear() {
+		System.out.println("[SIMPLECRUD] ............................................................ Cleaning Labels");
 		/* Clear Create */
 		txtFieldCreateID.setText(null);
 		txtFieldCreateName.setText(null);
@@ -371,6 +390,7 @@ public class FXController implements Initializable {
 		txtFieldCreateEMail.setText(null);
 		txtFieldCreateDDD.setText(null);
 		txtFieldCreatePhone.setText(null);
+		System.out.println("[SIMPLECRUD] ............................................................ CREATE Cleaned");
 
 		/* Clear Read */
 		chcReadInfo.setValue(null);
@@ -394,6 +414,7 @@ public class FXController implements Initializable {
 		txtFieldReadEMail.setText(null);
 		txtFieldReadDDD.setText(null);
 		txtFieldReadPhone.setText(null);
+		System.out.println("[SIMPLECRUD] ............................................................ READ Cleaned");
 
 		/* Clear Update */
 		chcUpdateInfo.setId(null);
@@ -417,6 +438,7 @@ public class FXController implements Initializable {
 		txtFieldUpdateEMail.setText(null);
 		txtFieldUpdateDDD.setText(null);
 		txtFieldUpdatePhone.setText(null);
+		System.out.println("[SIMPLECRUD] ............................................................ UPDATE Cleaned");
 
 		/* Clear Delete */
 		chcDeleteInfo.setValue(null);
@@ -440,10 +462,14 @@ public class FXController implements Initializable {
 		txtFieldDeleteEMail.setText(null);
 		txtFieldDeleteDDD.setText(null);
 		txtFieldDeletePhone.setText(null);
+		System.out.println("[SIMPLECRUD] ............................................................ DELETE Cleaned");
 
 	}
 
 	public void createAccount() {
+		System.out.println(
+				"[SIMPLECRUD] ............................................................ Creating new Account");
+
 		String first_name = txtFieldCreateName.getText();
 		String surname = txtFieldCreateSurname.getText();
 		String username = txtFieldCreateUsername.getText();
@@ -462,9 +488,12 @@ public class FXController implements Initializable {
 		String email = txtFieldCreateEMail.getText();
 		String ddd = txtFieldCreateDDD.getText();
 		String phone_number = txtFieldCreatePhone.getText();
+
 		CRUD create = new CRUD();
 		create.create(first_name, surname, username, user_password, martial_status, rg, cpf, date_of_birthh, age, state,
 				zipcode, address, district, house_number, city, email, ddd, phone_number);
+
+		System.out.println("[SIMPLECRUD] ............................................................ Done!");
 	}
 
 	public void readAccount() {
