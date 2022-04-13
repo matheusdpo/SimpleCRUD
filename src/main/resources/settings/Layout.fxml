@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Layout.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sys.FXController">
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Layout.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sys.FXController">
 	<children>
 		<AnchorPane id="header" prefHeight="80.0" prefWidth="700.0">
 			<children>
@@ -49,11 +49,16 @@
 		</AnchorPane>
 		<AnchorPane id="footer" layoutY="485.0" prefHeight="15.0" prefWidth="700.0">
 			<children>
-				<Label layoutX="17.0" text="Summer © 2022" textFill="#a1a1a1">
+				<Label layoutX="17.0" text="Summer ©" textFill="#a1a1a1">
 					<font>
 						<Font size="9.0" />
 					</font>
 				</Label>
+            <Label fx:id="lblYear" layoutX="70.0" textFill="#a1a1a1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
 			</children>
 		</AnchorPane>
 		<TabPane layoutY="80.0" prefHeight="405.0" prefWidth="700.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
@@ -239,7 +244,7 @@
                         <ChoiceBox layoutX="15.0" layoutY="182.0" prefHeight="25.0" prefWidth="135.0" />
                         <TextField editable="false" layoutX="153.0" layoutY="182.0" prefHeight="25.0" prefWidth="150.0" promptText="RG" />
                         <TextField editable="false" layoutX="308.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="CPF" />
-                        <ChoiceBox layoutX="467.0" layoutY="180.0" prefHeight="25.0" prefWidth="100.0" />
+                        <DatePicker fx:id="datePickerCreateDateofBirth1" layoutX="467.0" layoutY="179.0" prefHeight="25.0" prefWidth="100.0" />
                         <TextField alignment="CENTER" editable="false" layoutX="572.0" layoutY="179.0" prefHeight="25.0" prefWidth="30.0" promptText="Age" />
                         <ChoiceBox layoutX="608.0" layoutY="179.0" prefHeight="25.0" prefWidth="35.0" />
                         <TextField editable="false" layoutX="15.0" layoutY="238.0" prefHeight="25.0" prefWidth="135.0" promptText="ZIP Code" />
@@ -283,7 +288,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="260.0" layoutY="20.0" text="READ ACCOUNT" textAlignment="CENTER">
+                        <Label layoutX="260.0" layoutY="20.0" text="DELETE ACCOUNT" textAlignment="CENTER">
                            <font>
                               <Font name="Microsoft YaHei Bold" size="12.0" />
                            </font>
