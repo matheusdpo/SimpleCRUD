@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Layout.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sys.FXController">
+<AnchorPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Layout.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.com.controller.simplecrud.FXController">
 	<children>
 		<AnchorPane id="header" prefHeight="80.0" prefWidth="700.0">
 			<children>
@@ -83,11 +83,11 @@
 								<Label layoutX="58.0" layoutY="58.0" text="Name:" />
 								<TextField fx:id="txtFieldCreateName" layoutX="57.0" layoutY="75.0" prefHeight="25.0" prefWidth="90.0" promptText="Jhon" />
 								<Label layoutX="154.0" layoutY="58.0" text="Surname:" />
-								<TextField fx:id="txtFieldCreateSurname" layoutX="153.0" layoutY="75.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
+								<TextField fx:id="txtFieldCreateSurname" layoutX="153.0" layoutY="86.0" prefHeight="25.0" prefWidth="150.0" promptText="Titor" />
 								<Label layoutX="310.0" layoutY="58.0" text="Username:" />
-								<TextField fx:id="txtFieldUsername" layoutX="309.0" layoutY="75.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
+								<TextField layoutX="309.0" layoutY="75.0" prefHeight="25.0" prefWidth="175.0" promptText="jhon_titor" />
 								<Label layoutX="492.0" layoutY="59.0" text="Password:" />
-								<TextField fx:id="pwFieldCreatePassword" layoutX="491.0" layoutY="76.0" prefHeight="25.0" prefWidth="149.0" promptText="********" />
+								<TextField layoutX="491.0" layoutY="76.0" prefHeight="25.0" prefWidth="149.0" promptText="********" />
 								<Label layoutX="15.0" layoutY="115.0" text="Marital Status:" />
 								<ChoiceBox fx:id="chcCreateMartialStatus" layoutX="14.0" layoutY="132.0" prefHeight="25.0" prefWidth="135.0" />
 								<Label layoutX="154.0" layoutY="115.0" text="RG:" />
@@ -194,7 +194,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnUpdateUpdateAccount2" layoutX="500.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                        <Button LayoutX="500.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -203,7 +203,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnCancelUpdateAccount2" cancelButton="true" layoutX="570.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                        <Button cancelButton="true" layoutX="570.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -244,7 +244,7 @@
                         <ChoiceBox layoutX="15.0" layoutY="182.0" prefHeight="25.0" prefWidth="135.0" />
                         <TextField editable="false" layoutX="153.0" layoutY="182.0" prefHeight="25.0" prefWidth="150.0" promptText="RG" />
                         <TextField editable="false" layoutX="308.0" layoutY="181.0" prefHeight="25.0" prefWidth="150.0" promptText="CPF" />
-                        <DatePicker fx:id="datePickerCreateDateofBirth1" layoutX="467.0" layoutY="179.0" prefHeight="25.0" prefWidth="100.0" />
+                        <DatePicker layoutX="467.0" layoutY="179.0" prefHeight="25.0" prefWidth="100.0" />
                         <TextField alignment="CENTER" editable="false" layoutX="572.0" layoutY="179.0" prefHeight="25.0" prefWidth="30.0" promptText="Age" />
                         <ChoiceBox layoutX="608.0" layoutY="179.0" prefHeight="25.0" prefWidth="35.0" />
                         <TextField editable="false" layoutX="15.0" layoutY="238.0" prefHeight="25.0" prefWidth="135.0" promptText="ZIP Code" />
@@ -315,7 +315,7 @@
                         <TextField editable="false" layoutX="15.0" layoutY="295.0" prefHeight="25.0" prefWidth="290.0" promptText="mail@sample.com" />
                         <TextField alignment="CENTER" editable="false" layoutX="309.0" layoutY="295.0" prefHeight="25.0" prefWidth="30.0" promptText="DDD" />
                         <TextField editable="false" layoutX="345.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" promptText="number-phone" />
-                        <Button fx:id="btnUpdateUpdateAccount1" defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
+                        <Button defaultButton="true" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" styleClass="buttons">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -324,7 +324,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnCancelUpdateAccount1" cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
+                        <Button cancelButton="true" layoutX="340.0" layoutY="358.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttons">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
